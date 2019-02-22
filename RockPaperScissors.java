@@ -1,7 +1,7 @@
 /*
-Author: Suki Sahota
-Description: Rock Paper Scissors Game
-*/
+ * Author: Suki Sahota
+ * Description: Rock Paper Scissors Game
+ */
 import java.util.*;
 public class RockPaperScissors {
     public static void main(String[] args) {
