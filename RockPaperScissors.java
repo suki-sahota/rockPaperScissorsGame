@@ -20,19 +20,19 @@ public class RockPaperScissors {
         System.out.print("GOOD BYE. COME BACK SOON");
     }
     
-    //this method describes the game
+    // This method describes the game
     public static void description() {
         System.out.println();
         System.out.println("Using this app you can play a Rock-Paper-Scissors game against your computer.");
     }
     
-    //this method keeps track of wins/losses/ties
+    // This method keeps track of wins/losses/ties
     public static void play() {
         Random rand = new Random();
         Scanner sc = new Scanner(System.in);
         int wins = 0, losses = 0, ties = 0;
         boolean playAgain = true;
-        //while loop to control number of games
+        // While loop to control number of games
         while (playAgain) {
             String c = compChoice(rand);
             String u = userChoice(sc);
@@ -75,7 +75,7 @@ public class RockPaperScissors {
                 System.out.println("There is a tie");
             }
         }
-        //summary of game
+        // Summary of game
         int played = wins + losses + ties;
         System.out.println("------------------------------------\nHere is the result of the play:\nTimes played: " + played + "\nWins:         " + wins);
         System.out.println("Losses:       " + losses);
@@ -92,7 +92,7 @@ public class RockPaperScissors {
         System.out.println("\n------------------------------------");
     }   
     
-    //computer selection w/o if statements
+    // Computer selection w/o if statements
     public static String compChoice(Random rand) {
         int comp = rand.nextInt(3);
         String c = "";
@@ -109,12 +109,12 @@ public class RockPaperScissors {
         return c.toLowerCase();
     }
     
-    //user selection is made in this method
+    // User selection is made in this method
     public static String userChoice(Scanner sc) {
         System.out.println();
         System.out.print("Your choices are:\n\tRock\n\tPaper\n\tScissors\n\tstop\nEnter your choice: ");
         String uChoice = sc.next().toUpperCase();
-        //while loop to validate user data
+        // While loop to validate user data
         while (!(uChoice.equalsIgnoreCase("ROCK") || uChoice.equalsIgnoreCase("PAPER") || uChoice.equalsIgnoreCase("SCISSORS") || uChoice.equalsIgnoreCase("STOP"))) {
             System.out.print("your choices\n\tRock\n\tPaper\n\tScissors\n\tstop\nEnter your choice: ");
             uChoice = sc.next().toUpperCase();
